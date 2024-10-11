@@ -13,7 +13,7 @@ class HeroesListView: UIView {
     private lazy var heroesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.allowsSelection = true
         view.register(HeroesListItemCell.self, forCellWithReuseIdentifier: HeroesListItemCell.identifier)
