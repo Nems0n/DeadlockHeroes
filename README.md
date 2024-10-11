@@ -7,7 +7,7 @@ Hi! I’ve developed DeadlockHeroes, an app utilizing an open API to display inf
 
 **Architecture:** The app follows MVVM + Clean Architecture, ensuring a clear separation of concerns between the UI, business logic, and data layers
 
-**Overall:** UIKit (programmatic), PromiseKit, AutoLayout, Swinject for DI, SDWEbImage, Unit Tests, SPM, Code Mudularity, iOS 15 target
+**Overall:** UIKit (programmatic), PromiseKit, AutoLayout, Swinject for DI, SDWebImage, Unit Tests, SPM, Code Modularity, iOS 15 target
 
 
 ## Screenshots
