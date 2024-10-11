@@ -14,7 +14,7 @@ final class MockItemsRepository: ItemsRepositoryLogic {
     
     @Inject var itemsStore: ItemsStoreLogic
     
-    func fetchAllItems(completion: @escaping (Result<[DeadlockHeroes.Item], any Error>) -> Void) {
+    func fetchAllItems(completion: @escaping (Result<[Item], any Error>) -> Void) {
         let dataItems = items.map { $0.toDomain() }
         if shouldReturnError {
             completion(.failure(NSError(domain: "FetchItemsError", code: 1)))
@@ -23,7 +23,7 @@ final class MockItemsRepository: ItemsRepositoryLogic {
         }
     }
     
-    func fetchItem(by id: Int, completion: @escaping (Result<DeadlockHeroes.Item, any Error>) -> Void) {
+    func fetchItem(by id: Int, completion: @escaping (Result<Item, any Error>) -> Void) {
         let item = items.first(where: { $0.id == id })?.toDomain()
         guard let item else {
             completion(.failure(CustomError.general("Fetch item failure")))
@@ -32,7 +32,7 @@ final class MockItemsRepository: ItemsRepositoryLogic {
         completion(.success(item))
     }
     
-    func fetchItems(with query: DeadlockHeroes.ItemQuery, completion: @escaping (Result<[DeadlockHeroes.Item], any Error>) -> Void) {
+    func fetchItems(with query: DeadlockHeroes.ItemQuery, completion: @escaping (Result<[Item], any Error>) -> Void) {
         let items = itemsStore.items.filter { item in
             guard let name = item.name?.lowercased() else {
                     return false

@@ -13,20 +13,18 @@ import XCTest
 final class FetchHeroesUseCaseTests: XCTestCase {
     
     var sut: FetchHeroesUseCase!
-    var container: Container!
 
     override func setUp() {
+        AppAssembler.shared.configure(
+            MockDataAssembly()
+        )
         super.setUp()
-        container = Container.shared
-        
-        container.register(HeroesRepositoryLogic.self) { _ in MockHeroesRepository() }
         
         sut = FetchHeroesUseCase()
     }
 
     override func tearDown() {
         sut = nil
-        container = nil
         super.tearDown()
     }
 

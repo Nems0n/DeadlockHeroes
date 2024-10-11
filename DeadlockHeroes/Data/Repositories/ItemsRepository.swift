@@ -35,7 +35,7 @@ public final class ItemsRepository: ItemsRepositoryLogic {
         }
         completion(.success(item))
     }
-    
+
     public func fetchItems(with query: ItemQuery, completion: @escaping (Swift.Result<[Item], any Error>) -> Void) {
         let items = itemsStore.items.filter { items in
             guard let name = items.name?.lowercased() else {

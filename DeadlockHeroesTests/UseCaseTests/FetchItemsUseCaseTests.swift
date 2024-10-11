@@ -9,22 +9,21 @@ import Swinject
 import XCTest
 @testable import DeadlockHeroes
 
+// MARK: - FetchItemsUseCaseTests
 final class FetchItemsUseCaseTests: XCTestCase {
     
     var sut: FetchItemsUseCase!
-    var container: Container!
 
     override func setUp() {
+        AppAssembler.shared.configure(
+            MockDataAssembly()
+        )
         super.setUp()
-        container = Container.shared
-        container.register(ItemsRepositoryLogic.self) { _  in MockItemsRepository() }
-        
         sut = FetchItemsUseCase()
     }
 
     override func tearDown() {
         sut = nil
-        container = nil
         super.tearDown()
     }
 

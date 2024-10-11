@@ -12,21 +12,17 @@ import XCTest
 final class SearchItemsUseCaseTests: XCTestCase {
     
     var sut: SearchItemsUseCase!
-    var container: Container!
-    @Inject var repository: ItemsRepositoryLogic
 
     override func setUp() {
+        AppAssembler.shared.configure(
+            MockDataAssembly()
+        )
         super.setUp()
-        container = Container.shared
-        container.register(ItemsStoreLogic.self) { _ in MockItemsStore() }
-        container.register(ItemsRepositoryLogic.self) { _  in MockItemsRepository() }
-        
         sut = SearchItemsUseCase()
     }
 
     override func tearDown() {
         sut = nil
-        container = nil
         super.tearDown()
     }
 
