@@ -13,7 +13,6 @@ Hi! I’ve developed DeadlockHeroes, an app utilizing an open API to display inf
 ## Screenshots
 |Image|Image|
 |:-:|:-:|
-|||
-|||
-|||
+|![SCR-20241011-nbte Medium](https://github.com/user-attachments/assets/280760c5-b372-4fb3-9fcf-94e3df7c5a46)|![SCR-20241011-nanv Medium](https://github.com/user-attachments/assets/37140b1d-8c1c-4537-ae47-7da167bafb27)|
+|![SCR-20241011-naof Medium](https://github.com/user-attachments/assets/ea158013-fc9d-4567-8a87-82f7336a15d5)|![SCR-20241011-natf Medium](https://github.com/user-attachments/assets/ddda71cf-d638-4ba7-b0d1-0dcf01fb860f)|
 
